@@ -62,8 +62,9 @@ body{
 	text-transform: uppercase;
 	font-size: 7rem;
 	text-align: right;
+	line-height: 7rem;
 	font-weight: bold;
-	padding-top: 80px;
+	padding-top: 8rem;
 	padding-right: 30px;
 	margin-top: 0;
 }
@@ -106,4 +107,20 @@ body{
 	fill: white;
 	height: 4em;
     width: 4em;
+}
+
+@media only screen and (max-width: 800px) {
+	html{
+		font-size: 5px;
+	}
+	
+	.splide, .splide__track, .splide__slide{
+		height: 100vh;
+	}
+	
+	.splide__arrow, splide__arrow svg{
+		fill: white;
+		height: 2em;
+		width: 2em;
+	}
 }
