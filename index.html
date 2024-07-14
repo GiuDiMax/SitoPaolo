@@ -1,100 +1,16 @@
-<!DOCTYPE html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SIN ARC</title>
-    
-	<link rel="stylesheet" href="assets.css">
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-	<!--JQUERY-->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
-	
-	<!--SPLIDE-->
-	<script src="
-	https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-	"></script>
-	<link href="
-	https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-	" rel="stylesheet">
-	
-	<link rel="stylesheet" href="style.css?v=1.1">	
-	
-  </head>
-  <body>
-	<section class="topbarcontainer">
-		<div class="topbar">
-		<h1><a href="/">Sin<span class="hide">Arch</span></a></h1>
-		<div id="container" onclick="onMenuToggle();">
-			<input type="checkbox" id="checkbox"/>
-			<h1 id="icon-container">
-				<div id="icon" class="icon-menu"/>
-			</h1>
-		</div>
-		</div>
+<title>SIN ARC</title>
+<script src="head.js?v=1.0"></script>
+<section class="maincontent">
+	<section class="splide">
+	  <div class="splide__track">
+			<ul class="splide__list">
+				<li class="splide__slide"><img src="assets/images/01.jpg"></li>
+				<li class="splide__slide"><img src="assets/loading.gif" data-splide-lazy="assets/images/02.jpg"></li>
+				<li class="splide__slide"><img src="assets/loading.gif" data-splide-lazy="assets/images/03.jpg"></li>
+				<li class="splide__slide"><img src="assets/loading.gif" data-splide-lazy="assets/images/05.jpg"></li>
+				<li class="splide__slide"><img src="assets/loading.gif" data-splide-lazy="assets/images/06.jpg"></li>
+			</ul>
+	  </div>
 	</section>
-	<section class="menu" style="display:none">
-		<ul>
-			<!--<li><a href="/">Arch</a></li>-->
-			<li><a href="/">Studio</a></li>
-			<li><a href="/">Progetti</a></li>
-			<li><a href="/">Ricerca</a></li>
-			<li><a href="/">Contatti</a></li>
-			<li><a href="/">News</a></li>
-		</ul>
-	</section>
-	<section class="maincontent">
-		<section class="splide" aria-label="Splide Basic HTML Example">
-		  <div class="splide__track">
-				<ul class="splide__list">
-					<li class="splide__slide"><img src="assets/images/01.jpg"></li>
-					<li class="splide__slide"><img src="assets/images/02.jpg"></li>
-					<li class="splide__slide"><img src="assets/images/03.jpg"></li>
-					<li class="splide__slide"><img src="assets/images/05.jpg"></li>
-					<li class="splide__slide"><img src="assets/images/06.jpg"></li>
-				</ul>
-		  </div>
-		</section>
-	</section>
-	<script src="index.js"></script>
-  </body>
-  
-	<footer>
-		<script>
-			function onMenuToggle() {
-
-			  const icon = document.getElementById("icon");
-			  const checkbox = document.getElementById("checkbox");
-			  
-			  const isChecked = checkbox.checked;
-			  // update the checkbox's checked state
-			  checkbox.checked = !isChecked
-			  icon.className = isChecked ? "icon-close": "icon-menu";
-			  if (isChecked){
-				$(".menu").fadeIn(200);
-				$(".splide__arrow").fadeOut(200);
-			  }
-			  else {
-				$(".menu").fadeOut(200);
-				$(".splide__arrow").fadeIn(200);
-			  }
-			  
-			}
-		
-		
-			$( document ).ready(function() {
-				var splide = new Splide( '.splide' );
-				splide.mount();
-				
-
-			});
-		</script>
-	</footer>
-</html>
+</section>
+<script src="footer.js?v=1.0"></script>

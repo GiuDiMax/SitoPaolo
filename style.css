@@ -44,6 +44,30 @@ body{
 	text-decoration: none;
 }
 
+.icon-menu-container{
+	margin-right: 30px;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.icon-menu, .icon-menu:before, .icon-menu:after{
+	width: 75px;
+	height: 5px;
+}
+
+.icon-menu:before{
+	top: -15px;
+}
+
+.icon-menu:after{
+	top: 15px;
+}
+
+.icon-close, .icon-close:before, .icon-close:after{
+	width: 75px;
+	height: 5px;
+}
+
+
 .topbar .icon-menu{
 	color: white;
 }
@@ -56,6 +80,7 @@ body{
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: flex-start;	
+	-webkit-tap-highlight-color: transparent;
 }
 
 .menu ul{
@@ -67,6 +92,7 @@ body{
 	padding-top: 8rem;
 	padding-right: 30px;
 	margin-top: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .menu::selection, .menu::-moz-selection  {
@@ -76,12 +102,13 @@ body{
 
 .menu ul li{
 	list-style-type: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .menu ul li a{
 	color: rgba(255, 255, 255, 0.9);
 	text-decoration: none;
-	
+	-webkit-tap-highlight-color: transparent;
 }
 
 .splide, .splide__track, .splide__slide{
@@ -109,9 +136,53 @@ body{
     width: 4em;
 }
 
+.splide__pagination{
+	display: none;
+}
+
 @media only screen and (max-width: 800px) {
 	html{
 		font-size: 5px;
+	}
+	
+	.topbar h1 {
+		margin-left: 20px;
+		padding: 0px;
+	}
+	
+	.icon-menu-container{
+		margin-right: 20px;
+		top: 15px;
+	}
+	
+	#icon-container{
+		width: 40px;
+	}
+	
+	.icon-menu, .icon-menu:before, .icon-menu:after{
+		width: 40px;
+		height: 4px;
+	}
+
+	.icon-menu:before{
+		top: -10px;
+	}
+
+	.icon-menu:after{
+		top: 10px;
+	}
+
+	.icon-close, .icon-close:before, .icon-close:after{
+		width: 40px;
+		height: 4px;
+	}
+	
+	.menu{
+		margin-top: 25px;
+	}
+	
+	.menu ul{
+		line-height: 8rem;
 	}
 	
 	.splide, .splide__track, .splide__slide{
